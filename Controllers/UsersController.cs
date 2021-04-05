@@ -14,5 +14,11 @@ namespace dotNetServer.Controllers
         {
             return Users.GetUsers();
         }
+
+        [HttpPost("post")]
+        public void PostUser(User user)
+        {
+            Users.PostUser(user);
+        }
     }
 }

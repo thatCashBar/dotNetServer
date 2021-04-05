@@ -15,11 +15,17 @@ namespace dotNetServer.DummyData
             for (int i = 0; i < 5; i++)
             {
                 var user = new User();
-                user.email = $"user{i+1}@test.com";
-                user.password = $"password{i+1}";
+                user.email = $"user{i + 1}@test.com";
+                user.password = $"password{i + 1}";
                 user.isAdmin = false;
                 users.Add(user);
             }
+            return users;
+        }
+
+        static public List<User> PostUser(User user)
+        {
+            users.Add(user);
             return users;
         }
 
